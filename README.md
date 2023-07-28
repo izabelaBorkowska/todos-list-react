@@ -2,15 +2,16 @@
 
 Description:
 I have created a simple to-do list as part of my Front End course. You can use it to add new tasks and create a list below.
+
 Project DEMO: https://izabelaborkowska.github.io/todos-list-react/
 
 # Technologies used:
-HTML
-CSS
-JavaScript
-BEM
-React
-Flex
+- HTML
+- CSS
+- JavaScript
+- BEM
+- React
+- Flex
 
 ![Sample](to-do-demo.png)
 
