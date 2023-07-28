@@ -5,6 +5,7 @@
 
 .buttons__button {
   background-color: transparent;
+  font-size: 16px;
   color: teal;
   border: none;
   transition: color 0.5s;
