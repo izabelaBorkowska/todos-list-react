@@ -13,7 +13,7 @@ Project DEMO: https://izabelaborkowska.github.io/todos-list-react/
 - React
 - Flex
 
-![Sample](to-do-demo.png)
+![Sample](public/to-do-demo.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
