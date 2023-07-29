@@ -25,6 +25,15 @@ setHideDone(hideDone => !hideDone);
     setTasks(tasks => tasks.filter(task => task.id !== id));
   };
 
+  const toggleTaskDone = (id) => {
+    setTasks(tasks => tasks.map(task => {
+      if (task.id === id) {
+        return { ...task, done: !task.done};
+      }
+      return task;
+    }));
+  }
+
   return (
     <Container>
       <Header title="To-Do List" />
@@ -32,7 +41,13 @@ setHideDone(hideDone => !hideDone);
       <Section
         title="List of tasks"
         body=
-        {<Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} />}
+        {<Tasks 
+          tasks={tasks} 
+          hideDone={hideDone} 
+          removeTask={removeTask} 
+          toggleTaskDone={toggleTaskDone}
+          />
+        }
         extraHeaderContent={
           <Buttons 
           tasks={tasks} 
