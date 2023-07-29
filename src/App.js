@@ -34,6 +34,13 @@ setHideDone(hideDone => !hideDone);
     }));
   }
 
+  const setAllDone = () => {
+ setTasks(tasks => tasks.map(task => ({
+  ...task,
+  done: true,
+ })));
+  };
+
   return (
     <Container>
       <Header title="To-Do List" />
@@ -52,7 +59,8 @@ setHideDone(hideDone => !hideDone);
           <Buttons 
           tasks={tasks} 
           hideDone={hideDone}
-          toggleHideDone={toggleHideDone} />
+          toggleHideDone={toggleHideDone} 
+          setAllDone={setAllDone}/>
         }
       />
     </Container>
