@@ -41,10 +41,25 @@ setHideDone(hideDone => !hideDone);
  })));
   };
 
+  const addNewTask = (content) => {
+    setTasks(tasks => [
+      ...tasks,
+      {
+        content,
+        done: false,
+        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+      },
+    ]);
+  };
+
+
   return (
     <Container>
       <Header title="To-Do List" />
-      <Section title="Add new tasks" body={<Form />} />
+      <Section 
+      title="Add new tasks" 
+      body={<Form addNewTask={addNewTask} />} 
+      />
       <Section
         title="List of tasks"
         body=
